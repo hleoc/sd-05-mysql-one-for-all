@@ -58,7 +58,7 @@ INSERT INTO planos (nome_plano, valor) VALUES
 
 INSERT INTO artistas (nome_artista) VALUES
 ('Walter Phoenix'),
-('Freddie Shannon'),
+('Freedie Shannon'),
 ('Lance Day'),
 ('Peter Strong');
 
@@ -67,7 +67,7 @@ INSERT INTO albuns (titulo_album, artista_id) VALUES
 ('Exuberant', (SELECT artista_id FROM artistas WHERE nome_artista = 'Walter Phoenix')),
 ('Hallowed Steam', (SELECT artista_id FROM artistas WHERE nome_artista = 'Peter Strong')),
 ('Incandescent', (SELECT artista_id FROM artistas WHERE nome_artista = 'Lance Day')),
-('Temporary Culture', (SELECT artista_id FROM artistas WHERE nome_artista = 'Freddie Shannon'));
+('Temporary Culture', (SELECT artista_id FROM artistas WHERE nome_artista = 'Freedie Shannon'));
 
 INSERT INTO cancoes (titulo_cancao, album_id) VALUES
 ('Soul For Us', (SELECT album_id FROM albuns WHERE titulo_album = 'Envious')),
@@ -84,7 +84,7 @@ INSERT INTO cancoes (titulo_cancao, album_id) VALUES
 ('Rock His Everything', (SELECT album_id FROM albuns WHERE titulo_album = 'Incandescent')),
 ('Home Forever', (SELECT album_id FROM albuns WHERE titulo_album = 'Incandescent')),
 ('Diamond Power', (SELECT album_id FROM albuns WHERE titulo_album = 'Incandescent')),
-('Honey, Lets Be Silly', (SELECT album_id FROM albuns WHERE titulo_album = 'Incandescent')),
+("Honey, Let's Be Silly", (SELECT album_id FROM albuns WHERE titulo_album = 'Incandescent')),
 ('Thang Of Thunder', (SELECT album_id FROM albuns WHERE titulo_album = 'Temporary Culture')),
 ('Words Of Her Life', (SELECT album_id FROM albuns WHERE titulo_album = 'Temporary Culture')),
 ('Without My Streets', (SELECT album_id FROM albuns WHERE titulo_album = 'Temporary Culture'));
@@ -103,7 +103,7 @@ INSERT INTO historico_reproducao (usuario_id, cancao_id) VALUES
 ((SELECT usuario_id FROM usuarios WHERE nome_usuario = 'Cintia'), (SELECT cancao_id FROM cancoes WHERE titulo_cancao = 'Home Forever')),
 ((SELECT usuario_id FROM usuarios WHERE nome_usuario = 'Cintia'), (SELECT cancao_id FROM cancoes WHERE titulo_cancao = 'Words Of Her Life')),
 ((SELECT usuario_id FROM usuarios WHERE nome_usuario = 'Cintia'), (SELECT cancao_id FROM cancoes WHERE titulo_cancao = 'Reflections Of Magic')),
-((SELECT usuario_id FROM usuarios WHERE nome_usuario = 'Cintia'), (SELECT cancao_id FROM cancoes WHERE titulo_cancao = 'Honey, Lets Be Silly')),
+((SELECT usuario_id FROM usuarios WHERE nome_usuario = 'Cintia'), (SELECT cancao_id FROM cancoes WHERE titulo_cancao = "Honey, Let's Be Silly")),
 ((SELECT usuario_id FROM usuarios WHERE nome_usuario = 'Bill'), (SELECT cancao_id FROM cancoes WHERE titulo_cancao = 'Troubles Of My Inner Fire')),
 ((SELECT usuario_id FROM usuarios WHERE nome_usuario = 'Bill'), (SELECT cancao_id FROM cancoes WHERE titulo_cancao = 'Thang Of Thunder')),
 ((SELECT usuario_id FROM usuarios WHERE nome_usuario = 'Bill'), (SELECT cancao_id FROM cancoes WHERE titulo_cancao = 'Magic Circus')),
@@ -113,10 +113,10 @@ INSERT INTO historico_reproducao (usuario_id, cancao_id) VALUES
 
 INSERT INTO seguidores (usuario_id, artista_id) VALUES
 ((SELECT usuario_id FROM usuarios WHERE nome_usuario = 'Thati'), (SELECT artista_id FROM artistas WHERE nome_artista = 'Walter Phoenix')),
-((SELECT usuario_id FROM usuarios WHERE nome_usuario = 'Thati'), (SELECT artista_id FROM artistas WHERE nome_artista = 'Freddie Shannon')),
+((SELECT usuario_id FROM usuarios WHERE nome_usuario = 'Thati'), (SELECT artista_id FROM artistas WHERE nome_artista = 'Freedie Shannon')),
 ((SELECT usuario_id FROM usuarios WHERE nome_usuario = 'Thati'), (SELECT artista_id FROM artistas WHERE nome_artista = 'Lance Day')),
 ((SELECT usuario_id FROM usuarios WHERE nome_usuario = 'Cintia'), (SELECT artista_id FROM artistas WHERE nome_artista = 'Walter Phoenix')),
 ((SELECT usuario_id FROM usuarios WHERE nome_usuario = 'Cintia'), (SELECT artista_id FROM artistas WHERE nome_artista = 'Lance Day')),
 ((SELECT usuario_id FROM usuarios WHERE nome_usuario = 'Bill'), (SELECT artista_id FROM artistas WHERE nome_artista = 'Peter Strong')),
 ((SELECT usuario_id FROM usuarios WHERE nome_usuario = 'Bill'), (SELECT artista_id FROM artistas WHERE nome_artista = 'Walter Phoenix')),
-((SELECT usuario_id FROM usuarios WHERE nome_usuario = 'Roger'), (SELECT artista_id FROM artistas WHERE nome_artista = 'Freddie Shannon'));
+((SELECT usuario_id FROM usuarios WHERE nome_usuario = 'Roger'), (SELECT artista_id FROM artistas WHERE nome_artista = 'Freedie Shannon'));
